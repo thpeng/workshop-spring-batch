@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -18,6 +19,7 @@ import lombok.Data;
  */
 @Entity
 @Data
+@NoArgsConstructor
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +28,11 @@ public class Address {
     private String numberOfStreet; 
     private int plz; 
     private String municipality; 
-    
+
+    public Address( String street, String numberOfStreet, int plz, String municipality) {
+        this.street = street;
+        this.numberOfStreet = numberOfStreet;
+        this.plz = plz;
+        this.municipality = municipality;
+    }    
 }

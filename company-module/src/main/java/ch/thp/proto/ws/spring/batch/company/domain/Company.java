@@ -7,10 +7,12 @@
 package ch.thp.proto.ws.spring.batch.company.domain;
 
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import lombok.Data;
@@ -30,9 +32,9 @@ public class Company {
     private int id; 
     private String companyId; 
     private String name; 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Address headquarter;
-    @OneToMany
+    @OneToMany(cascade=CascadeType.ALL)
     private Set<Address>subsidiaries; 
 
     public Company(String companyId, String name) {
