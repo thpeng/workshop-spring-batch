@@ -1,0 +1,7 @@
+@separator(|)
+ABCD-1234|Bernstrasse|23|3007|Bern
+ABCD-1234|Colombstrasse|11|3027|Bern
+ABCD-1234|Bernstrasse|3|3007|Bern
+ABCD-1234|Belpstrasse|11|3001|Bern
+DEFG-1234|Oltenstrasse|8a|6000|Aarau
+@written-items(3)
